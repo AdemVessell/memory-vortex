@@ -1,8 +1,3 @@
-
----
-
-### 2) `memory_vortex.py` (paste this into the file **as-is**)
-```python
 import numpy as np
 import sympy as sp
 import json
