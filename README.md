@@ -51,6 +51,20 @@ Created by **Adem Vessell** with collaborative assistance from:
 
 ---
 
+## Troubleshooting (HuggingFace heads / label mismatch)
+
+If you load a pretrained classification checkpoint (often trained with 1000 ImageNet classes) for a dataset with a different number of labels, you may see warnings like `classifier.weight MISMATCH`.
+
+Fix: reinitialize the classifier head while loading the pretrained backbone:
+
+```python
+model = ViTForImageClassification.from_pretrained(
+    "WinKawks/vit-tiny-patch16-224",
+    num_labels=K,                  # your number of classes
+    ignore_mismatched_sizes=True,  # loads backbone; re-inits head
+)
+
+
 ## Core concept
 Instead of hand-tuning replay ratios, we can often **compress** an observed “replay need” signal into a small analytic operator.
 
