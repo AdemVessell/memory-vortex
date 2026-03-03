@@ -73,3 +73,11 @@ If `memory_vortex_operator.json` is missing, the scheduler uses a safe fallback 
 ## Install
 ```bash
 pip install numpy sympy
+
+## Run
+
+```bash
+pip install numpy sympy
+python memory_vortex.py
+
+
