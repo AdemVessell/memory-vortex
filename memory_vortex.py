@@ -1,13 +1,7 @@
 
 ---
 
-## 2) `memory_vortex.py` (single file, runnable)
-
-Copy/paste this exactly. It includes:
-- scheduler
-- benchmark
-- optional discovery stub (you can enable it)
-
+### 2) `memory_vortex.py` (paste this into the file **as-is**)
 ```python
 import numpy as np
 import sympy as sp
